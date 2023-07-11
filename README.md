@@ -10,7 +10,7 @@ a* (a-star) pathfinding algorithm written in go
 
 Install
 -------
-    go get github.com/jpierer/astar@main
+    go get github.com/coldwind/astar@main
 
 Example
 -------
@@ -20,7 +20,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jpierer/astar"
+	"github.com/coldwind/astar"
 )
 
 func main() {
