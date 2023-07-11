@@ -76,6 +76,26 @@ func (a *astar) GetNeighborNodes(node Node) []Node {
 		neighborNodes = append(neighborNodes, rightNode)
 	}
 
+	upRightNode := Node{X: node.X + 1, Y: node.Y - 1, parent: &node}
+	if a.isAccessible(upRightNode) {
+		neighborNodes = append(neighborNodes, upRightNode)
+	}
+
+	downRightNode := Node{X: node.X + 1, Y: node.Y + 1, parent: &node}
+	if a.isAccessible(downRightNode) {
+		neighborNodes = append(neighborNodes, downRightNode)
+	}
+
+	upLeftNode := Node{X: node.X - 1, Y: node.Y - 1, parent: &node}
+	if a.isAccessible(upLeftNode) {
+		neighborNodes = append(neighborNodes, upLeftNode)
+	}
+
+	downLeftNode := Node{X: node.X - 1, Y: node.Y + 1, parent: &node}
+	if a.isAccessible(downLeftNode) {
+		neighborNodes = append(neighborNodes, downLeftNode)
+	}
+
 	return neighborNodes
 }
 
